@@ -1,0 +1,35 @@
+.login-text {
+  color: grey;
+}
+
+.custom-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  font-family: Arial, sans-serif;
+  padding: 10px;
+}
+
+.custom-border-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.green-left-border {
+  border-left: 5px solid green; /* Thick green left border */
+  border-top: none; /* Remove top border */
+  border-right: none; /* Remove right border */
+  border-bottom: none;
+}
+.blue-left-border {
+  border-left: 5px solid blue; /* Thick blue left border */
+  border-top: none; /* Remove top border */
+  border-right: none; /* Remove right border */
+  border-bottom: none;
+}
+
+.orange-left-border {
+  border-left: 5px solid rgb(255, 170, 0); /* Thick pink left border */
+  border-top: none; /* Remove top border */
+  border-right: none; /* Remove right border */
+  border-bottom: none;
+}
