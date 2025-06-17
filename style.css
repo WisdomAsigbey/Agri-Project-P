@@ -1,12 +1,15 @@
-/* header {
+/* navbar */
+.navbar {
   position: fixed;
-  width: 100%;
-  height: 60px;
-  z-index: 1;
   top: 0;
-  left: 0;
-  right: 0;
-} */
+  z-index: 1;
+  width: 100%;
+}
+
+/* main */
+#main-b {
+  margin-top: 80px;
+}
 
 /* Custom card styles */
 .custom-card {
@@ -47,29 +50,7 @@
   border-bottom: none;
 }
 
-/* meter */
-meter {
-  width: 100%;
-  height: 30px;
-  overflow: hidden;
-}
-.guage-2::-webkit-meter-optimum-value {
-  background: blue;
-}
-
-.guage-2::-webkit-meter-suboptimal-value {
-  background: lightblue;
-}
-
-.guage-2::-webkit-meter-even-less-good-value {
-  background: darkblue;
-}
-
 /* transition */
 .transition {
   transition: 0.5s;
 }
-
-/* #main-b {
-  margin-top: 80px;
-} */

@@ -17,10 +17,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="./fontawesome-free-6.7.2-web/fontawesome-free-6.7.2-web/css/all.css"
-    /> -->
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -48,9 +44,8 @@
           class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown"
-          aria-expanded="false"
+          data-bs-target="#sideBar"
+          aria-controls="#sideBar"
           aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
@@ -105,93 +100,93 @@
                   Content
                 </a>
               </li>
+              <!--management dropdown -->
               <li>
-                <!--management dropdown -->
-                <button
-                  class="btn dropdown_btn"
-                  onclick="toggleDropdown_1()"
-                  id="btn_1"
-                >
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle d-flex align-items-center my-2 text-white"
-                    data-bs-toggle="dropdown"
+                <div class="position-absolute">
+                  <button
+                    class="btn dropdown_btn"
+                    data-bs-target="dropdown_1"
+                    id="btn_1"
                   >
-                    <i
-                      class="fa-solid fa-gears d-block mx-auto mb-1"
-                      width="24"
-                      height="24"
-                      aria-hidden="true"
-                    ></i>
-                    Management
-                  </a>
-                </button>
-                <ul
-                  class="d-none dropdown-menu d-block mx-0 border-0 shadow w-220px"
-                  data-bs-theme="dark"
-                  id="dropdown_1"
-                  data-bs-toggle="dropdown"
-                >
-                  <li>
                     <a
-                      class="dropdown-item d-flex gap-2 align-items-center"
-                      href="https://www.google.com"
+                      href="#"
+                      class="nav-link dropdown-toggle d-flex align-items-center my-2 text-white"
                     >
                       <i
-                        class="fa-solid fa-cloud"
-                        width="16"
-                        height="16"
+                        class="fa-solid fa-gears d-block mx-auto mb-1"
+                        width="24"
+                        height="24"
                         aria-hidden="true"
                       ></i>
-                      Weather
+                      Management
                     </a>
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item d-flex gap-2 align-items-center"
-                      href="https://www.google.com"
-                    >
-                      <i
-                        class="fa-solid fa-seedling"
-                        width="16"
-                        height="16"
-                        aria-hidden="true"
-                      ></i>
-                      Crops
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item d-flex gap-2 align-items-center"
-                      href="https://www.google.com"
-                    >
-                      <i
-                        class="fa-solid fa-store"
-                        width="16"
-                        height="16"
-                        aria-hidden="true"
-                      ></i>
+                  </button>
+                  <ul
+                    class="d-none dropdown-menu d-block mx-0 border-0 shadow w-220px"
+                    data-bs-theme="dark"
+                    id="dropdown_1"
+                  >
+                    <li>
+                      <a
+                        class="dropdown-item d-flex gap-2 align-items-center"
+                        href="#"
+                      >
+                        <i
+                          class="fa-solid fa-cloud"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        ></i>
+                        Weather
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex gap-2 align-items-center"
+                        href="https://www.google.com"
+                      >
+                        <i
+                          class="fa-solid fa-seedling"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        ></i>
+                        Crops
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex gap-2 align-items-center"
+                        href="https://www.google.com"
+                      >
+                        <i
+                          class="fa-solid fa-store"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        ></i>
 
-                      Market
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      class="dropdown-item d-flex gap-2 align-items-center"
-                      href="https://www.google.com"
-                    >
-                      <i
-                        class="fa-solid fa-comments"
-                        width="16"
-                        height="16"
-                        aria-hidden="true"
-                      ></i>
+                        Market
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item d-flex gap-2 align-items-center"
+                        href="https://www.google.com"
+                      >
+                        <i
+                          class="fa-solid fa-comments"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        ></i>
 
-                      Forums
-                    </a>
-                  </li>
-                </ul>
-                <!-- end management dropdown -->
+                        Forums
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- end management dropdown -->
+                </div>
               </li>
             </ul>
           </div>
@@ -201,12 +196,11 @@
             <button
               class="btn dropdown_btn"
               id="btn_2"
-              onclick="toggleDropdown_2()"
+              data-bs-target="dropdown_2"
             >
               <a
                 href="#"
                 class="nav-link dropdown-toggle align-items-center d-flex text-white col-lg-auto my-2 my-md-0 text-small"
-                data-bs-toggle="dropdown"
               >
                 <i
                   class="fa-solid fa-user d-block me-2 mx-auto mb-1"
@@ -300,18 +294,50 @@
             <a
               class="nav-link d-flex align-items-center gap-2 active"
               aria-current="page"
-              href="#"
+              href="/dashboard.html"
             >
               <i class="fa-solid fa-house-chimney"></i>
               Dashboard
             </a>
           </li>
+          <!-- CMS Update -->
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2" href="#">
-              <i class="fa-solid fa-wrench"></i>
-              CMS Update
-              <i class="fa-solid fa-caret-down"></i>
-            </a>
+            <button
+              class="btn dropdown_btn"
+              id="btn_3"
+              data-bs-target="dropdown_3"
+            >
+              <a
+                class="nav-link dropdown-toggle d-flex align-items-center gap-2 p-0"
+                href="#"
+              >
+                <i class="fa-solid fa-wrench"></i>
+                CMS Update
+              </a>
+            </button>
+
+            <div class="position-absolute">
+              <ul
+                class="dropdown-menu d-none d-block mx-0 border-0 shadow"
+                id="dropdown_3"
+              >
+                <li>
+                  <a class="dropdown-item" href="#">Upload new content </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Edit existing entries </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Delete outdated content </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">View content history </a>
+                </li>
+                <li>
+                  <a href="#" class="dropdown-item">Preview updates</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2" href="#">
@@ -416,7 +442,7 @@
       <div class="contaier">
         <div class="row">
           <!-- card-1 -->
-          <div class="col-lg-4 align-items-center">
+          <div class="col-lg-3 align-items-center">
             <div
               class="card d-flex text-bg-white mb-4 custom-card green-left-border"
             >
@@ -433,7 +459,7 @@
             </div>
           </div>
           <!-- card-2 -->
-          <div class="col-lg-4 align-items-center">
+          <div class="col-lg-3 align-items-center">
             <div
               class="card d-flex text-bg-white mb-4 custom-card green-left-border"
             >
@@ -450,7 +476,7 @@
             </div>
           </div>
           <!-- card-3 -->
-          <div class="col-lg-4 align-items-center">
+          <div class="col-lg-3 align-items-center">
             <div
               class="card d-flex text-bg-white mb-4 custom-card blue-left-border"
             >
@@ -467,7 +493,7 @@
             </div>
           </div>
           <!-- card-4 -->
-          <div class="col-lg-4 align-items-center">
+          <div class="col-lg-3 align-items-center">
             <div
               class="card d-flex text-bg-white mb-4 custom-card orange-left-border"
             >
