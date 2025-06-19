@@ -75,3 +75,27 @@ closeBtn.addEventListener("click", () => {
     navbarBrand.setAttribute("data-bs-toggle", dataBsToggle);
   }
 });
+
+// Customer
+var customerRole = "Agent";
+var customerCountry = "Ghana";
+class Customer {
+  constructor(firstName, lastName, address, email) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.address = address;
+    this.email = email;
+  }
+  country = customerCountry;
+  role = customerRole;
+  message(name) {
+    this.lastName = name;
+    console.log(
+      `Hello ${this.firstName}, you're welcome to the Agri-Extension site. Check our services by clicking on services`
+    );
+  }
+}
+// const bernard = new Customer("Bernard");
+// bernard.message("Dogah");
+// console.log(bernard.role);
+// console.log(bernard.country);
