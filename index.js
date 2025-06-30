@@ -1,6 +1,3 @@
-const navToggler = document.querySelector(".navbar-toggler");
-const navbarBrand = document.querySelector(".navbar-brand");
-const closeBtn = document.querySelector(".btn-close");
 const dropdownBtn = document.querySelectorAll(".dropdown_btn");
 
 // toggle dropdown
@@ -62,18 +59,6 @@ new Chart("myChart", {
       },
     ],
   },
-});
-
-// close sideBar
-closeBtn.addEventListener("click", () => {
-  if (navToggler) {
-    navToggler.click();
-  } else if (navbarBrand) {
-    dataBsToggle = navbarBrand.getAttribute("data-bs-toggle");
-    navbarBrand.setAttribute("data-bs-toggle", "offcanvas");
-    navbarBrand.click();
-    navbarBrand.setAttribute("data-bs-toggle", dataBsToggle);
-  }
 });
 
 // Customer
